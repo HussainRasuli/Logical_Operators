@@ -1,0 +1,86 @@
+<html>
+<head>
+
+      <meta http-equiv="content-Type" content="text/html; charset= utf-8" />
+      <meta name="viewport" content="width=device-width , initial-scale=1.0">
+      <title> Logical Operators </title>
+	
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	  
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	  
+	  
+</head>
+<body style="text-align:center; background-color:#344453;">
+<div class="container col-lg-5 col-md-5 col-sm-6 col-xs-12" style="position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 12%;">
+  <div class="panel panel-danger">
+     <div class="panel-heading text-center">
+	     عملیه منطقی XNOR
+	 </div>
+  <div class="panel-body">
+     <form method="post" action="xnor_operator.html" style="display:inline-block;">
+	 
+     
+	
+	<div class="input-group">
+	<span class="input-group-addon">عدد اولی&nbsp;</span>
+	<select class="form-control" id="first">
+	     <option>1</option>
+	     <option>0</option>
+	</select>
+	</div><br>
+	<div class="input-group">
+	<span class="input-group-addon">عدد دومی</span>
+	<select class="form-control" id="second">
+	     <option>1</option>
+	     <option>0</option>
+	</select>
+	</div>
+	
+  <br>
+   <button class="btn btn-success" onclick="validateForm();">اجرا</button> &nbsp;&nbsp;&nbsp;
+  <button class="btn btn-primary"><a href="xor_operator.html" style="color:white; text-decoration:none;"><< قبلی </a></button>
+  <button class="btn btn-primary"><a href="buffer_operator.html" title="home" style="color:white; text-decoration:none;">بعدی >></a></button>
+  </form>
+  </div>
+  </div>  
+  </div>
+  <script>
+function validateForm() {
+    var x = document.getElementById("first").value;
+	var y = document.getElementById("second").value;
+	var a = parseInt(x);
+	var b = parseInt(y);
+    if (a == 0) {
+	     if(b == 0) {
+		 alert("True (1)");
+		 }
+    }
+	 
+	if(a == 0){
+	   if(b == 1) {
+		alert("False (0)");
+		}
+	}
+	
+	if(a == 1){
+	   if(b == 0) {
+		alert("False (0)");
+		}
+	}
+	
+	 if(a == 1){
+	   if(b == 1) {
+		alert("True (1)");
+		}
+	}
+}
+</script>
+</body>
+</html>
